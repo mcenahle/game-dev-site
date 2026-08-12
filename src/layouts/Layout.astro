@@ -1,6 +1,7 @@
 ---
 import "../styles/global.scss";
 import Info from "../components/Info.astro";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -17,6 +18,7 @@ import Info from "../components/Info.astro";
     ></script>
     <link href="/styles/global.css" rel="stylesheet" />
   </head>
+  <ClientRouter />
   <body>
     <Info />
     <slot />
@@ -34,4 +36,5 @@ import Info from "../components/Info.astro";
       >
     </p>
   </footer>
+
 </html>
