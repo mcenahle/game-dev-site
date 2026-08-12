@@ -1,7 +1,7 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../layouts/Navbar.astro";
+import { Icon } from "astro-icon/components";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -9,5 +9,63 @@ import Navbar from "../layouts/Navbar.astro";
 
 <Layout>
   <Navbar />
-  <Welcome />
+  <title>Mcenahle Game</title>
+  <div id="container">
+    <div class="card" style="text-align: center;">
+      <div class="card-body">
+        <h2 class="card-title">Mcenahle Game</h2>
+        <p class="card-text" style="font-size: 20px;">
+          一款受到 <a href="https://ddlc.moe" target="_blank"
+            ><u>DDLC</u> <Icon name="mdi:open-in-new" />
+          </a> 启发而制作的游戏。游戏引擎：<a
+            href="https://renpy.org"
+            target="_blank"
+            ><u>Ren'Py</u> <Icon name="mdi:open-in-new" />
+          </a>
+        </p>
+        <p class="card-text" style="font-size: 20px;">
+          目前版本：<img
+            src="https://img.shields.io/github/v/tag/mcenahle/game?label="
+            alt="当前版本"
+          />。<span style="font-size: 16px;"
+            ><a href="https://releases.game.mcenahle.dev" target="_blank"
+              ><u>查看版本更新日志</u> <Icon name="mdi:open-in-new" />
+            </a></span
+          >
+        </p>
+        <div class="row g-3">
+          <div class="col-6">
+            <a
+              href="https://github.com/mcenahle/game/releases"
+              target="_blank"
+              class="btn btn-primary w-100 hero-btn"
+              role="button"
+            >
+              <Icon name="mdi:download" /> 下载游戏
+            </a>
+          </div>
+
+          <div class="col-6">
+            <a
+              href="https://github.com/mcenahle/game"
+              target="_blank"
+              class="btn btn-outline-primary w-100 hero-btn"
+              role="button"
+            >
+              <Icon name="mdi:github" /> 下载源代码
+            </a>
+          </div>
+
+          <div class="d-grid">
+            <a
+              href="/support-os/"
+              role="button"
+              class="btn btn-outline-secondary btn-sm btn-block"
+              >查看操作系统支持信息 <Icon name="mdi:arrow-top-right" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
