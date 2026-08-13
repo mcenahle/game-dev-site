@@ -27,8 +27,8 @@ import { Icon } from "astro-icon/components";
         </tr>
         <tr>
           <td>开始支持的版本</td>
-          <td style="color:green">自 0.0.4 起广泛支持</td>
-          <td style="color:green">自 0.0.5 起广泛支持</td>
+          <td style="color:green">0.0.4</td>
+          <td style="color:green">0.0.5</td>
           <td style="color:red">暂不支持</td>
         </tr>
         <tr>
@@ -49,6 +49,29 @@ import { Icon } from "astro-icon/components";
         </tr>
       </tbody>
     </table>
+
+    <p>关于暂不支持 iOS/macOS 的情况说明：</p>
+    <ul>
+      <li>
+        由于分发 iOS 软件需要每年 99 美元的 <a
+          href="https://developer.apple.com/cn/programs/"
+          target="_blank"
+          ><u>Apple Developer Program</u> <Icon name="mdi:open-in-new" /></a
+        >
+        ，该费用对于目前仍处于学生阶段的个人开发项目而言成本较高，因此暂不适配 iOS
+        版本；
+      </li>
+      <li>
+        由于每次测试 macOS 软件均需要绕过 macOS 的门禁，并需要打开 VMWare
+        上的虚拟机，且虚拟机的运行速度很慢，因此暂不适配 macOS 版本。
+      </li>
+    </ul>
+    <p>
+      为解决上述问题，后期将 <a href="/upcoming-and-won-t-add-features/"
+        ><u>支持网页版本的自动化构建并发布发行版</u>&nbsp;
+        <Icon name="mdi:arrow-top-right" /></a
+      >。具体加入时间待定。
+    </p>
 
     <div class="modal fade" id="downloadModal">
       <div class="modal-dialog modal-lg">
