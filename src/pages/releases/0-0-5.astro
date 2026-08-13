@@ -1,0 +1,46 @@
+---
+import Navbar from "../../layouts/Navbar.astro";
+import ReleaseLayout from "../../layouts/ReleaseLayout.astro";
+import Notiosandmacos from "../../components/Not-ios-and-macos.astro";
+import { Icon } from "astro-icon/components";
+
+export const title = "v0.0.5 - Android 自动发布";
+export const date = "2026-08-08 20:09";
+---
+
+<Navbar />
+
+<ReleaseLayout title={title} date={date}>
+  <Notiosandmacos />
+  <p>在此版本中，我们集成了 Android 自动构建并发布发行版。</p>
+  <h3>一、自动化构建&发布</h3>
+  <p>集成了 Android 自动构建并发布发行版。</p>
+  <h3>二、完整更改日志</h3>
+  <ol>
+    <li>
+      <p>
+        <a
+          href="https://github.com/mcenahle/game/commits/v0.0.5"
+          target="_blank"
+          ><u>完整更改日志</u> <Icon name="mdi:open-in-new" />
+        </a>
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="https://github.com/mcenahle/game/compare/v0.0.4...v0.0.5"
+          target="_blank"
+          ><u>和上一个版本的对比</u> <Icon name="mdi:open-in-new" /></a
+        >
+      </p>
+    </li>
+  </ol>
+  <h3>三、下载</h3>
+  <p>
+    <a
+      href="https://github.com/mcenahle/game/releases/tag/v0.0.5"
+      target="_blank"><u>下载</u> <Icon name="mdi:open-in-new" /></a
+    >
+  </p>
+</ReleaseLayout>

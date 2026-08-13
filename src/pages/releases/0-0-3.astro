@@ -1,0 +1,30 @@
+---
+import Navbar from "../../layouts/Navbar.astro";
+import ReleaseLayout from "../../layouts/ReleaseLayout.astro";
+import Notiosandmacos from "../../components/Not-ios-and-macos.astro";
+import { Icon } from "astro-icon/components";
+
+export const title = "v0.0.3 - windows 构建自动发布";
+export const date = "2026-08-08 14:28";
+---
+
+<Navbar />
+
+<ReleaseLayout title={title} date={date}>
+  <Notiosandmacos />
+  <p>
+    在此版本中，我们支持了 windows 自动化构建并<b>发布</b
+    >发行版。后期将支持网页、android 等。
+  </p>
+  <h3>一、自动化构建&发布</h3>
+  <p>
+    完成 windows 的自动化构建&发布，暂时不支持 web 和 android
+    的自动化构建&发布。
+  </p>
+  <h3>二、完整更改日志</h3>
+  <p>
+    <a href="https://github.com/mcenahle/game/commits/v0.0.3" target="_blank"
+      ><u>完整更改日志</u> <Icon name="mdi:open-in-new" />
+    </a>
+  </p>
+</ReleaseLayout>

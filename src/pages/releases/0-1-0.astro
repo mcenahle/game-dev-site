@@ -1,0 +1,90 @@
+---
+import Navbar from "../../layouts/Navbar.astro";
+import ReleaseLayout from "../../layouts/ReleaseLayout.astro";
+import Notiosandmacos from "../../components/Not-ios-and-macos.astro";
+import { Icon } from "astro-icon/components";
+
+export const title = "v0.1.0 - 图标更新";
+export const date = "2026-08-12 13:42";
+---
+
+<Navbar />
+
+<ReleaseLayout title={title} date={date}>
+  <Notiosandmacos />
+  <p>
+    在此版本中，我们完成了 Windows 和 Android
+    设备上的图标上的更新。与此同时，一并加入本仓库的许可证——GPL
+    v3.0。相关说明如下：
+  </p>
+  <blockquote>
+    <p>
+      <em
+        >The source code of this project is licensed under the GNU General
+        Public License v3.0 (GPL-3.0).</em
+      >
+    </p>
+    <p>
+      <em
+        >Unless otherwise stated, this license applies only to the source code
+        and does not automatically apply to other game content or assets,
+        including but not limited to artwork, music, sound effects, story text,
+        character designs, logos, and other creative materials. Some visual
+        assets used in this project were generated with the assistance of
+        OpenAI’s generative AI services. Such assets are not licensed under the
+        GPL-3.0 unless explicitly stated otherwise.</em
+      >
+    </p>
+    <p>
+      <em
+        >Third-party assets, if any, remain subject to their respective licenses
+        and terms.</em
+      >
+    </p>
+  </blockquote>
+  <h3>一、样式更改</h3>
+  <p>引入 Android 和 Windows 图标。</p>
+  <h3>二、杂项更改</h3>
+  <ol>
+    <li>
+      <p>
+        整理“关于”页面文案，并提供新的检查更新渠道，以及添加授权和许可证的说明；
+      </p>
+    </li>
+    <li>
+      <p>修复必须在 tags 中才能正常完成 windows ci 的问题；</p>
+    </li>
+    <li>
+      <p>移除 <code>web.yml</code>。</p>
+    </li>
+  </ol>
+  <h3>三、完整更改日志</h3>
+  <ol>
+    <li>
+      <p>
+        <a
+          href="https://github.com/mcenahle/game/commits/v0.1.0"
+          target="_blank"
+          ><u>完整更改日志</u>&nbsp;
+          <Icon name="mdi:open-in-new" /></a
+        >
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="https://github.com/mcenahle/game/compare/v0.0.7...v0.1.0"
+          target="_blank"
+          ><u>和上一个版本的对比</u> <Icon name="mdi:open-in-new" /></a
+        >
+      </p>
+    </li>
+  </ol>
+  <h3>四、下载</h3>
+  <p>
+    <a
+      href="https://github.com/mcenahle/game/releases/tag/v0.1.0"
+      target="_blank"><u>下载</u> <Icon name="mdi:open-in-new" /></a
+    >
+  </p>
+</ReleaseLayout>

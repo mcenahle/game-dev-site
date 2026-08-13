@@ -1,0 +1,61 @@
+---
+import Navbar from "../../layouts/Navbar.astro";
+import ReleaseLayout from "../../layouts/ReleaseLayout.astro";
+import Notiosandmacos from "../../components/Not-ios-and-macos.astro";
+import { Icon } from "astro-icon/components";
+
+export const title = "v0.0.7 - 剧情开始";
+export const date = "2026-08-09 14:49";
+---
+
+<Navbar />
+
+<ReleaseLayout title={title} date={date}>
+  <Notiosandmacos />
+  <p>
+    在此版本中，我们正式开始了游戏剧情的撰写工作。同时，也开始了美术资产的管理。
+  </p>
+  <p>目前生成图片主要由 ChatGPT 进行。</p>
+  <h3>一、样式更改</h3>
+  <p>降低历史屏幕条目的高度至 70，原本为 210。</p>
+  <h3>二、剧情更改</h3>
+  <ol>
+    <li>
+      <p>开始剧情，将原先的模板文字删除；</p>
+    </li>
+    <li>
+      <p>允许玩家自定义游戏主角名称；</p>
+    </li>
+    <li>
+      <p>使用 AI 绘制背景和角色图片。</p>
+    </li>
+  </ol>
+  <h3>三、完整更改日志</h3>
+  <ol>
+    <li>
+      <p>
+        <a
+          href="https://github.com/mcenahle/game/commits/v0.0.7"
+          target="_blank"
+          ><u>完整更改日志</u> <Icon name="mdi:open-in-new" />
+        </a>
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="https://github.com/mcenahle/game/compare/v0.0.6...v0.0.7"
+          target="_blank"
+          ><u>和上一个版本的对比</u> <Icon name="mdi:open-in-new" /></a
+        >
+      </p>
+    </li>
+  </ol>
+  <h3>四、下载</h3>
+  <p>
+    <a
+      href="https://github.com/mcenahle/game/releases/tag/v0.0.7"
+      target="_blank"><u>下载</u> <Icon name="mdi:open-in-new" /></a
+    >
+  </p>
+</ReleaseLayout>
