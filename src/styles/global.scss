@@ -54,6 +54,21 @@ footer {
   margin-right: 12px !important;
 }
 
+@font-face {
+  font-family: "JetBrainsMono-Regular";
+  src: url("https://www.mcenahle.org.cn/fonts/JetBrainsMono-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+code {
+  font-family: "JetBrainsMono-Regular";
+  color: black;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
 @media (max-width: 992px) {
   .navbar-nav {
     margin-left: 12px !important;
