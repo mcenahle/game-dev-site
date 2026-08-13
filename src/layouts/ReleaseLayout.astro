@@ -1,0 +1,40 @@
+---
+import Layout from "./Layout.astro";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  title: string;
+  date: string;
+}
+
+const { title, date = "" } = Astro.props;
+---
+
+<meta charset="utf-8" />
+<title>{title}</title>
+
+<Layout title={title}>
+  <div id="container">
+    <div class="domain-card bg-white shadow-sm overflow-hidden rounded-3">
+      <div class="domain-card-header py-3 px-4 border-bottom">
+        <div class="text-black fs-5 fw-bold">
+          {title}
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="small text-muted mt-2">
+            <Icon name="mdi:calendar" /> 日期：{date}
+          </div>
+          <div class="share-warp small text-muted mt-2">
+            <!-- 分享：<img src="/img/wx.png" onclick="share(4);" /> -->
+          </div>
+        </div>
+      </div>
+      <div class="domain-card-body p-4 lh2">
+        <slot />
+        <a class="btn btn-primary" href="/releases/" role="button"
+          ><Icon name="mdi:arrow-left" /> 返回</a
+        >
+      </div>
+    </div>
+  </div>
+</Layout>

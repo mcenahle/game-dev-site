@@ -1,0 +1,68 @@
+---
+import Navbar from "../../layouts/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+interface BlogModule {
+  title: string;
+  date: string;
+}
+
+const modules = import.meta.glob<BlogModule>("./*.astro", {
+  eager: true,
+});
+
+const posts = Object.entries(modules)
+  // 排除首页自己
+  .filter(([path]) => path !== "./index.astro")
+
+  // 整理文章信息
+  .map(([path, post]) => {
+    const filename = path.replace("./", "").replace(".astro", "");
+
+    return {
+      title: post.title,
+      date: post.date,
+      url: `/releases/${filename}/`,
+    };
+  })
+
+  // 按日期从新到旧排列
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+---
+
+<Navbar />
+
+<title>游戏版本列表 - Mcenahle Game</title>
+
+<Layout>
+  {
+    posts.length === 0 ? (
+      <p class="text-muted">暂时还没有文章。</p>
+    ) : (
+      <div id="container">
+        <div class="domain-card bg-white shadow-sm overflow-hidden rounded-3 mb-4">
+          <div class="domain-card-header py-3 px-4 border-bottom d-flex align-items-center">
+            <div class="text-black fs-5 fw-bold">游戏版本列表</div>
+          </div>
+          <div class="domain-card-body p-4">
+            <ul>
+              {posts.map((post) => (
+                <li class="py-2">
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <a href={post.url} title={post.title}>
+                      <u>{post.title}</u> <Icon name="mdi:arrow-top-right" />
+                    </a>
+                    <span class="text-muted rounded-pill">
+                      <Icon name="mdi:calendar" /> {post.date}
+                    </span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    )
+  }
+</Layout>
