@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout>
+  <Navbar />
+  <title>开源 - Mcenahle Game</title>
+  <div id="container">
+    <h2>开源</h2>
+    <p>
+      <b
+        >下方所指的“本项目”指的是游戏项目，不是本网站项目。本网站保留所有权利。</b
+      >
+    </p>
+    <p>
+      本项目的源代码遵循 <a
+        href="https://www.gnu.org/licenses/gpl-3.0.html"
+        target="_blank"
+        ><u>GNU 通用公共许可证 v3.0 (GPL-3.0)</u>&nbsp;
+        <Icon name="mdi:open-in-new" />
+      </a> 授权。
+    </p>
+
+    <p>
+      除非另有说明，本许可证仅适用于源代码，并不自动适用于其他游戏内容或资源，包括但不限于美术作品、音乐、音效、故事文本、角色设计、徽标和其他创意素材。本项目中使用的一些视觉资源由
+      OpenAI 的生成式人工智能服务辅助生成。除非另有明确说明，此类资源不受
+      GPL-3.0 授权。
+    </p>
+
+    <p>如有第三方资源，则仍受其各自许可证和条款的约束。</p>
+
+    <img
+      src="/images/游戏开源详解.avif"
+      alt="游戏开源详解"
+      style="width: auto; max-width: 100%; vertical-align: middle;"
+    />
+  </div>
+</Layout>
