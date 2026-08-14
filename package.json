@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@iconify-json/fluent-color": "^1.2.21",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/svg-spinners": "^1.2.4",
     "astro": "^7.1.6",
