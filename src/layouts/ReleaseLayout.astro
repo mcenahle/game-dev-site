@@ -31,8 +31,11 @@ const { title, date = "" } = Astro.props;
       </div>
       <div class="domain-card-body p-4 lh2">
         <slot />
-        <a class="btn btn-primary" href="/releases/" role="button"
-          ><Icon name="mdi:arrow-left" /> 返回</a
+        <a
+          class="btn btn-primary"
+          href="/releases/"
+          role="button"
+          style="margin-top: 12px;"><Icon name="mdi:arrow-top-left" /> 返回</a
         >
       </div>
     </div>
