@@ -6,11 +6,12 @@ import { Icon } from "astro-icon/components";
 
 export const title = "v0.0.2 - 支持 windows 构建自动化";
 export const date = "2026-08-08 14:19";
+export const numeric_version = "当时未引入";
 ---
 
 <Navbar />
 
-<ReleaseLayout title={title} date={date}>
+<ReleaseLayout title={title} date={date} numeric_version={numeric_version}>
   <Notiosandmacos />
   <p>
     在此版本中，我们支持了 windows 自动化构建发行版。后期将支持网页、android

@@ -5,15 +5,16 @@ import { Icon } from "astro-icon/components";
 interface Props {
   title: string;
   date: string;
+  numeric_version: string;
 }
 
-const { title, date = "" } = Astro.props;
+const { title, date, numeric_version = "" } = Astro.props;
 ---
 
 <meta charset="utf-8" />
 <title>{title}</title>
 
-<Layout title={title}>
+<Layout>
   <div id="container">
     <div class="domain-card bg-white shadow-sm overflow-hidden rounded-3">
       <div class="domain-card-header py-3 px-4 border-bottom">
@@ -25,7 +26,7 @@ const { title, date = "" } = Astro.props;
             <Icon name="mdi:calendar" /> 日期：{date}
           </div>
           <div class="share-warp small text-muted mt-2">
-            <!-- 分享：<img src="/img/wx.png" onclick="share(4);" /> -->
+            <Icon name="mdi:android-studio" /> 数值版本号：{numeric_version}
           </div>
         </div>
       </div>
