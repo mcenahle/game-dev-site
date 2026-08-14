@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<link rel="stylesheet" href="https://cdn.plyr.io/3.8.4/plyr.css" />
+<script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
+
+<Layout>
+  <Navbar />
+  <title>Mcenahle Game Original Soundtrack</title>
+  <div id="container">
+    <h2>Mcenahle Game Original Soundtrack</h2>
+    <div id="aplayer"></div>
+    <p style="margin-top:20px;">
+      <Icon name="ri:music-ai-fill" />&nbsp;
+      <b>音乐采用海绵音乐 AI 生成。</b>
+    </p>
+    <p>
+      根据本网站 <a href="/open-source/"
+        ><u>开源声明</u> <Icon name="mdi:arrow-top-right" />
+      </a>，Mcenahle Game 不声明相关著作权。
+    </p>
+
+    <script>
+      import APlayer from "aplayer";
+      import "aplayer/dist/APlayer.min.css";
+
+      const ap = new APlayer({
+        container: document.getElementById("aplayer"),
+        loop: false,
+        mini: false,
+        autoplay: false,
+        theme: "#93adf0",
+        audio: [
+          {
+            name: "Everything Begins",
+            artist: "Mcenahle Game",
+            url: "/music/01 Everything Begins.mp3",
+            cover: "/favicon.ico",
+          },
+        ],
+      });
+    </script>
+  </div>
+</Layout>
