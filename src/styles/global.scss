@@ -48,6 +48,15 @@ footer {
   --bs-bg-opacity: 1;
 }
 
+.nav-link:focus,
+.nav-link:hover,
+.nav-link:active,
+.dropdown-item:focus,
+.dropdown-item:hover,
+.dropdown-item:active {
+  border: 1px dotted #666;
+}
+
 .navbar-brand,
 .navbar-toggler {
   margin-left: 12px !important;
