@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout>
+  <Navbar />
+  <title>ci 运行状态 - Mcenahle Game</title>
+  <div id="container">
+    <h2>ci 运行状态</h2>
+    <table class="table table-striped text-center">
+      <thead>
+        <tr>
+          <th></th>
+          <th><Icon name="ri:windows-fill" /> Build Windows</th>
+          <th><Icon name="ri:android-fill" /> Build Android</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>状态</td>
+          <td
+            ><img
+              src="https://github.com/mcenahle/game/actions/workflows/windows.yml/badge.svg"
+              alt="Build Windows Status"
+              style="width: auto; max-width: 100%; vertical-align: middle;"
+            /></td
+          >
+          <td
+            ><img
+              src="https://github.com/mcenahle/game/actions/workflows/android.yml/badge.svg"
+              alt="Build Android Status"
+              style="width: auto; max-width: 100%; vertical-align: middle;"
+            /></td
+          >
+        </tr>
+        <tr>
+          <td>运行列表</td>
+          <td
+            ><a
+              href="https://github.com/mcenahle/game/actions/workflows/windows.yml"
+              target="_blank"
+              ><u>查看运行列表</u> <Icon name="mdi:open-in-new" /></a
+            ></td
+          >
+          <td
+            ><a
+              href="https://github.com/mcenahle/game/actions/workflows/android.yml"
+              target="_blank"
+              ><u>查看运行列表</u> <Icon name="mdi:open-in-new" /></a
+            ></td
+          >
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</Layout>
