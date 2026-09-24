@@ -2,10 +2,30 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<div class="alert alert-info">
+<!-- <div class="alert alert-info">
   <i
     >目前暂不考虑加入 <Icon name="mdi:apple" /> iOS 版本和 macOS 版本。有关详细信息，请转到&nbsp;
     <a href="/support-os/"><u>本页面</u> <Icon name="mdi:arrow-top-right" /></a
     >。</i
   >
-</div>
+</div> -->
+<fluent-message-bar intent="warning" style="margin-bottom: 16px;">
+  <span slot="icon" style="color: #DA3B01">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+    >
+      <path
+        fill="currentColor"
+        d="M8.681 2.785c.568-1.047 2.071-1.047 2.638 0l6.5 12.002A1.5 1.5 0 0 1 16.502 17H3.498a1.5 1.5 0 0 1-1.319-2.215zM10.5 7.5a.5.5 0 0 0-1 0v4a.5.5 0 0 0 1 0zm.25 6.25a.75.75 0 1 0-1.5 0a.75.75 0 0 0 1.5 0"
+      ></path>
+    </svg>
+  </span>
+  <i
+    >目前暂不考虑加入 <Icon name="mdi:apple" /> iOS 版本和 macOS 版本。有关详细信息，请转到&nbsp;
+    <a href="/support-os/"><u>本页面</u> <Icon name="mdi:arrow-top-right" /></a
+    >。</i
+  >
+</fluent-message-bar>
