@@ -13,65 +13,43 @@ import { Icon } from "astro-icon/components";
   background: linear-gradient(to right, #daefff, #9BCAEE);
   border-color: #9BCAEE;"
 >
-  <Icon name="fluent-color:checkmark-circle-16" /> 本网站为 Mcenahle 游戏网站。
-  <fluent-button id="open-dialog">了解更多信息</fluent-button>
+  <Icon name="fluent-color:checkmark-circle-16" /> 本网站为 Mcenahle 游戏网站。目前正在开发中。<a
+    href="#"
+    data-bs-toggle="modal"
+    data-bs-target="#myModal"
+  >
+    <u>了解更多信息。</u>
+  </a>
 </div>
 
-<fluent-dialog id="dialog-default" aria-label="Default Dialog">
-  <fluent-dialog-body>
-    <h4 slot="title">本网站为 Mcenahle 游戏网站（正在开发中）。</h4>
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">本网站为 Mcenahle 游戏网站（正在开发中）。</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+        ></button>
+      </div>
 
-    <fluent-button
-      fluent-button
-      id="close-dialog-icon"
-      tabindex="0"
-      slot="close"
-      appearance="transparent"
-      icon-only
-      aria-label="close"
-    >
-      <svg
-        fill="currentColor"
-        aria-hidden="true"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="m4.09 4.22.06-.07a.5.5 0 0 1 .63-.06l.07.06L10 9.29l5.15-5.14a.5.5 0 0 1 .63-.06l.07.06c.18.17.2.44.06.63l-.06.07L10.71 10l5.14 5.15c.18.17.2.44.06.63l-.06.07a.5.5 0 0 1-.63.06l-.07-.06L10 10.71l-5.15 5.14a.5.5 0 0 1-.63.06l-.07-.06a.5.5 0 0 1-.06-.63l.06-.07L9.29 10 4.15 4.85a.5.5 0 0 1-.06-.63l.06-.07-.06.07Z"
-          fill="currentColor"></path>
-      </svg>
-    </fluent-button>
+      <div class="modal-body">
+        <p>
+          <Icon name="fluent-color:globe-shield-20" /> 官方网站使用 <code
+            >mcenahle.page</code
+          > 或者其它域名，例如 <code>mcenahle.dev</code>。
+        </p>
+        <p>
+          <Icon name="fluent-color:lock-shield-16" /> 安全网站使用 HTTPS。
+        </p>
+        <p>
+          <Icon name="fluent-color:code-16" /> 源代码可在 GitHub 上获取。
+        </p>
+      </div>
 
-    <p>
-      <Icon name="fluent-color:globe-shield-20" /> 官方网站使用 <code
-        >mcenahle.page</code
-      > 或者其它域名，例如 <code>mcenahle.dev</code>。
-    </p>
-    <p>
-      <Icon name="fluent-color:lock-shield-16" /> 安全网站使用 HTTPS。
-    </p>
-    <p>
-      <Icon name="fluent-color:code-16" /> 源代码可在 GitHub 上获取。
-    </p>
-
-    <fluent-button id="close-dialog" slot="action" appearance="primary">
-      关闭
-    </fluent-button>
-  </fluent-dialog-body>
-</fluent-dialog>
-
-<script>
-  const openButton = document.querySelector("#open-dialog");
-  const closeButton = document.querySelector("#close-dialog");
-  const dialog = document.querySelector("#dialog-default");
-
-  openButton?.addEventListener("click", () => {
-    dialog?.show();
-  });
-
-  closeButton?.addEventListener("click", () => {
-    dialog?.hide();
-  });
-</script>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+          >关闭</button
+        >
+      </div>
+    </div>
+  </div>
+</div>
