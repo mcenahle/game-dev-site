@@ -1,0 +1,65 @@
+---
+import Navbar from "../../layouts/Navbar.astro";
+import ReleaseLayout from "../../layouts/ReleaseLayout.astro";
+import Notiosandmacos from "../../components/Not-ios-and-macos.astro";
+import { Icon } from "astro-icon/components";
+
+export const title = "v0.1.1 - [开发中的版本]";
+export const date = "2026-09/10-??";
+export const numeric_version = "9";
+---
+
+<Navbar />
+
+<ReleaseLayout title={title} date={date} numeric_version={numeric_version}>
+  <Notiosandmacos />
+  <p>
+    在此版本中，我们加入了一个多结局，主要是学习了 DDLC 和 who is the red
+    queen。在此表示感谢！
+  </p>
+  <p>
+    并且，由于现实中的更换宿舍风波，我也在游戏中加入了一个“抽油烟机”NPC。对的。<i
+      >No people were harmed in the game of 抽油烟机.</i
+    >
+  </p>
+  <h4>一、剧情更改</h4>
+  <ol>
+    <li>
+      <p>加入新角色——抽油烟机，游戏剧情继续推进；</p>
+    </li>
+    <li>
+      <p>加入一个 quick ending。</p>
+    </li>
+  </ol>
+  <h4>二、完整更改日志</h4>
+  <ol>
+    <li>
+      <p>
+        <a
+          href="https://github.com/mcenahle/game/commits/v0.1.1"
+          target="_blank"
+          ><u>【未生效链接】完整更改日志</u>&nbsp;
+          <Icon name="mdi:open-in-new" /></a
+        >
+      </p>
+    </li>
+    <li>
+      <p>
+        <a
+          href="https://github.com/mcenahle/game/compare/v0.1.0...v0.1.1"
+          target="_blank"
+          ><u>【未生效链接】和上一个版本的对比</u>&nbsp;
+          <Icon name="mdi:open-in-new" /></a
+        >
+      </p>
+    </li>
+  </ol>
+  <h4>三、下载</h4>
+  <p>
+    <a
+      href="https://github.com/mcenahle/game/releases/tag/v0.1.1"
+      target="_blank"
+      ><u>【未生效链接】下载</u> <Icon name="mdi:open-in-new" /></a
+    >
+  </p>
+</ReleaseLayout>
