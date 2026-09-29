@@ -21,10 +21,16 @@ import { Icon } from "astro-icon/components";
           </a>
         </p>
         <p class="card-text" style="font-size: 20px;">
-          目前版本：<img
-            src="https://img.shields.io/github/v/tag/mcenahle/game?label="
-            alt="当前版本"
-          />。<span style="font-size: 16px;"
+          目前版本：<a
+            href="https://github.com/mcenahle/game/releases"
+            target="_blank"
+            ><u
+              ><img
+                src="https://img.shields.io/github/v/tag/mcenahle/game?label="
+                alt="当前版本"
+              /></u
+            >
+          </a>。<span style="font-size: 16px;"
             ><a href="/releases/"
               ><u>查看版本更新日志</u> <Icon name="mdi:arrow-top-right" />
             </a></span
@@ -58,7 +64,9 @@ import { Icon } from "astro-icon/components";
               href="/support-os/"
               role="button"
               class="btn btn-outline-secondary btn-sm btn-block"
-              >查看操作系统支持信息 <Icon name="mdi:arrow-top-right" />
+              ><Icon name="mdi:information-outline" /> 查看操作系统支持信息 <Icon
+                name="mdi:arrow-top-right"
+              />
             </a>
           </div>
         </div>
