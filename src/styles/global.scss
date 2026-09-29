@@ -1,3 +1,8 @@
+@import url("https://resources.mcenahle.page/fonts/times-new-roman/times.woff2");
+@import url("https://resources.mcenahle.page/fonts/times-new-roman/timesi.woff2");
+@import url("https://resources.mcenahle.page/fonts/times-new-roman/timebi.woff2");
+@import url("https://resources.mcenahle.page/fonts/times-new-roman/timebd.woff2");
+
 html {
   scroll-behavior: smooth;
 }
@@ -107,6 +112,11 @@ code {
 
 a {
   text-decoration: none;
+  word-break: break-all;
+}
+
+.license {
+  font-family: "Times New Roman";
 }
 
 main {
