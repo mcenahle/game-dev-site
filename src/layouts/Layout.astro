@@ -19,11 +19,19 @@ import { Icon } from "astro-icon/components";
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/js/bootstrap.bundle.min.js"
     ></script>
+
+    <script
+      is:inline
+      type="module"
+      src="https://search.game.mcenahle.dev/assets/v0.0.40/search-snippet.es.js"
+    ></script>
   </head>
   <ClientRouter />
   <body>
     <Info />
     <slot />
+    <chat-bubble-snippet api-url="https://search.game.mcenahle.dev/">
+    </chat-bubble-snippet>
   </body>
   <Footer />
 
